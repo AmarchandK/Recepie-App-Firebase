@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "235003588512",
+    "project_id": "recipe-by-wit",
+    "storage_bucket": "recipe-by-wit.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:235003588512:android:8b5b3c1f33dfd8b573bec5",
+        "android_client_info": {
+          "package_name": "com.example.wit_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "235003588512-fvqn1gid59psmo7bo60rgma3ut537sq6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wit_task",
+            "certificate_hash": "ff65dd1267fc09b65c56e429cee65209b180d14d"
+          }
+        },
+        {
+          "client_id": "235003588512-6g2acnms52k0173891nlb0ob25c1fqu5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwHf7LtKamlxuqtNS5Clywv54yl4LLD3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "235003588512-6g2acnms52k0173891nlb0ob25c1fqu5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
