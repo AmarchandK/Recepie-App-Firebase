@@ -14,7 +14,6 @@ class HomeProvider with ChangeNotifier {
 
   onTabIndexChange(int number) {
     pageIndex = number;
-
     notifyListeners();
   }
 }

@@ -1,14 +1,14 @@
 class IngredientListModel {
   String? ingredient1;
-  double? quantity1;
+  String? quantity1;
   String? ingredient2;
-  double? quantity2;
+  String? quantity2;
   String? ingredient3;
-  double? quantity3;
+  String? quantity3;
   String? ingredient4;
-  double? quantity4;
+  String? quantity4;
   String? ingredient5;
-  double? quantity5;
+  String? quantity5;
 
   IngredientListModel({
     this.ingredient1,

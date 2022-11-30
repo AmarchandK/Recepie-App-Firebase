@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wit_task/app/add_reciepie/model/ingredient_model.dart';
 import 'package:wit_task/app/add_reciepie/view_model/auth_services.dart';
 import 'package:wit_task/app/detail_screen/view/widgets/ingredient_widgets.dart';
 
@@ -15,7 +14,8 @@ class DetailScreen extends StatelessWidget {
     required this.name,
     required this.time,
     required this.uid,
-    required this.hours, required this.incredents,
+    required this.hours,
+    required this.incredents,
   }) : super(key: key);
   final String image;
   final String description;
@@ -23,7 +23,7 @@ class DetailScreen extends StatelessWidget {
   final String time;
   final String hours;
   final String uid;
-  final IngredientListModel incredents;
+  final Map<String, dynamic> incredents;
   @override
   Widget build(BuildContext context) {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
@@ -70,6 +70,10 @@ class DetailScreen extends StatelessWidget {
                   ],
                 ),
               ),
+              Divider(
+                height: 20,
+                color: kTeal,
+              ),
               const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text(
@@ -81,14 +85,23 @@ class DetailScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              IngredientWidgetCard(
+                incredents: incredents,
+              ),
               Divider(
                 height: 20,
                 color: kTeal,
               ),
-               IngredientWidgetCard(ingredientListModel: incredents),
-              Divider(
-                height: 20,
-                color: kTeal,
+              const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  'Description',
+                  style: TextStyle(
+                    height: 1.5,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),

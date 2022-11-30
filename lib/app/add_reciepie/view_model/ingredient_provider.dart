@@ -27,15 +27,15 @@ class IngredientProvider with ChangeNotifier {
       FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
       //calling our userModel
       ingredientListModel.ingredient1 = ingredient1.text.trim();
-      ingredientListModel.quantity1 = double.parse(quantity1.text.trim());
+      ingredientListModel.quantity1 = quantity1.text.trim();
       ingredientListModel.ingredient2 = ingredient2.text.trim();
-      ingredientListModel.quantity2 = double.parse(quantity2.text.trim());
+      ingredientListModel.quantity2 = quantity2.text.trim();
       ingredientListModel.ingredient3 = ingredient3.text.trim();
-      ingredientListModel.quantity3 = double.parse(quantity3.text.trim());
+      ingredientListModel.quantity3 = quantity3.text.trim();
       ingredientListModel.ingredient4 = ingredient4.text.trim();
-      ingredientListModel.quantity4 = double.parse(quantity4.text.trim());
+      ingredientListModel.quantity4 = quantity4.text.trim();
       ingredientListModel.ingredient5 = ingredient5.text.trim();
-      ingredientListModel.quantity5 = double.parse(quantity5.text.trim());
+      ingredientListModel.quantity5 = quantity5.text.trim();
 
       //sending details to fireStore
       await firebaseFirestore

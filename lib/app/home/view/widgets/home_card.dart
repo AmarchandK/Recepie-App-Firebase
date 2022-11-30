@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:wit_task/app/add_reciepie/model/ingredient_model.dart';
 import '../../../../constants/colors.dart';
 import '../../../../routes/routes.dart';
 import '../../../detail_screen/view/detail_screen.dart';
@@ -14,6 +15,7 @@ class HomeCardsWidgets extends StatelessWidget {
     required this.image,
     required this.description,
     required this.time,
+    required this.incredents,
   }) : super(key: key);
 
   final String foodName;
@@ -22,6 +24,7 @@ class HomeCardsWidgets extends StatelessWidget {
   final String image;
   final String time;
   final QueryDocumentSnapshot<Object?> doc;
+  final Map<String, dynamic> incredents;
 
   @override
   Widget build(BuildContext context) {
@@ -29,13 +32,13 @@ class HomeCardsWidgets extends StatelessWidget {
       onTap: () {
         RoutesProvider.nextScreen(
             screen: DetailScreen(
-          incredents: doc["ingredientModel"],
           uid: doc.id,
           hours: hour,
           time: time,
           name: foodName,
           image: image,
           description: description,
+          incredents: incredents,
         ));
       },
       child: SizedBox(

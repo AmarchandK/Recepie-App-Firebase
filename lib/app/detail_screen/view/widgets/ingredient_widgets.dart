@@ -1,47 +1,38 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-
-import '../../../add_reciepie/model/ingredient_model.dart';
-import '../../../add_reciepie/view_model/auth_services.dart';
+import 'package:wit_task/constants/colors.dart';
 
 class IngredientWidgetCard extends StatelessWidget {
   const IngredientWidgetCard({
     Key? key,
-    required this.ingredientListModel,
+    required this.incredents,
   }) : super(key: key);
-  final IngredientListModel ingredientListModel;
+  final Map<String, dynamic> incredents;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
+    return Wrap(
       children: [
-        Expanded(
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                  flex: 6,
-                  child: Text(context
-                      .read<AddRecipiAuth>()
-                      .ingredientListModel
-                      .ingredient1
-                      .toString())),
-            ],
-          ),
-        ),
-        Expanded(
-          child: Row(
-            children: <Widget>[
-              Expanded(
-                  flex: 6,
-                  child: Text(context
-                      .read<AddRecipiAuth>()
-                      .ingredientListModel
-                      .quantity1
-                      .toString()))
-            ],
-          ),
-        ),
+        _chips(key: 'ingredient1', value: 'quantity1'),
+        _chips(key: 'ingredient2', value: 'quantity2'),
+        _chips(key: 'ingredient3', value: 'quantity3'),
+        _chips(key: 'ingredient4', value: 'quantity4'),
+        _chips(key: 'ingredient5', value: 'quantity5'),
       ],
+    );
+  }
+
+  Widget _chips({required String key, required String value}) {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: ChoiceChip(
+          disabledColor: kPrimary,
+          label: Text(
+            "${incredents[key]} : ${incredents[value]}",
+            style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          selected: false),
     );
   }
 }

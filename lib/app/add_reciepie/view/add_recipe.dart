@@ -155,9 +155,9 @@ class IngredientWidget extends StatelessWidget {
               Expanded(
                 flex: 6,
                 child: SignUpTextforms(
-                  textType: TextInputType.number,
+                  textType: TextInputType.name,
                   icon: Icons.view_comfortable_outlined,
-                  text: "quantity",
+                  text: "Quantity(KG)",
                   vertical: 15,
                   controller: quantityController,
                 ),
@@ -183,7 +183,8 @@ class ButtonWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(
             horizontal: 120,
             vertical: 15,
-          ), backgroundColor: kPrimary,
+          ),
+          backgroundColor: kPrimary,
           elevation: 10,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(

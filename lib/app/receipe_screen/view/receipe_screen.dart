@@ -37,6 +37,7 @@ class ReciepeScreen extends StatelessWidget {
                     hour: snapshot.data!.docs[index]['veg'],
                     time: snapshot.data!.docs[index]['time'],
                     doc: snapshot.data!.docs[index],
+                    incredents: snapshot.data!.docs[index]['ingredientModel'],
                   ),
                 );
               },
